@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A7AC1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#559DD1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Logo mark - stylized K -->
+  <rect x="10" y="15" width="50" height="50" rx="8" fill="url(#logoGradient)"/>
+  <path d="M25 25 L25 55 M25 40 L45 25 M25 40 L45 55" stroke="white" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Company name -->
+  <text x="75" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700" fill="#0B1B2A">KUBER</text>
+  <!-- Tagline/Ltd -->
+  <text x="215" y="52" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#4B5B6B">Ltd</text>
+</svg>
+
