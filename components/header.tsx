@@ -7,12 +7,11 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import { Container } from "./container";
+import { GoogleTranslate } from "./google-translate";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  // TODO: Implement i18n - for now this is just UI
-  const [currentLang, setCurrentLang] = useState("EN");
 
   const { navigation } = siteConfig;
 
@@ -78,23 +77,8 @@ export function Header() {
 
           {/* Language Switcher & Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            {/* Language Switcher - TODO: Implement i18n */}
-            <div className="flex items-center gap-1 text-sm">
-              {navigation.languages.map((lang, index) => (
-                <button
-                  key={lang.code}
-                  onClick={() => setCurrentLang(lang.label)}
-                  className={cn(
-                    "px-2 py-1 rounded transition-colors",
-                    currentLang === lang.label
-                      ? "text-primary font-medium"
-                      : "text-text-muted hover:text-text"
-                  )}
-                >
-                  {lang.label}
-                </button>
-              ))}
-            </div>
+            {/* Google Translate Widget */}
+            <GoogleTranslate />
 
             {/* Mobile Menu Button */}
             <button
