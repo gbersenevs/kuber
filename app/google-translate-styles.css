@@ -57,3 +57,13 @@ body.translated-rtl {
   display: none !important;
 }
 
+/* Ensure language buttons are never translated */
+.notranslate {
+  translate: no !important;
+}
+
+button.notranslate,
+.notranslate button {
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+

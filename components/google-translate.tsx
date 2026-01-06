@@ -81,18 +81,19 @@ export function GoogleTranslate() {
       <div id="google_translate_element" style={{ display: "none" }}></div>
       
       {/* Custom language buttons */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 notranslate">
         {languages.map((lang) => (
           <button
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
             className={cn(
-              "px-3 py-1.5 text-sm font-medium rounded transition-all duration-200",
+              "notranslate px-3 py-1.5 text-sm font-medium rounded transition-all duration-200",
               currentLang === lang.code
                 ? "bg-primary text-white"
                 : "text-text-muted hover:text-primary hover:bg-surface"
             )}
             aria-label={`Switch to ${lang.label}`}
+            translate="no"
           >
             {lang.label}
           </button>
